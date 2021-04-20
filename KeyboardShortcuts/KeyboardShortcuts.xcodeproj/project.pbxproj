@@ -29,6 +29,7 @@
 		8F039EE726208D4F006C1CD4 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		8F039EEB26208D62006C1CD4 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		8F179F0B2624CC2700D6FAE7 /* UIResponder+KeyboardShortcuts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIResponder+KeyboardShortcuts.swift"; sourceTree = "<group>"; };
+		8F4A2DEB262E50F300897945 /* KeyboardShortcuts.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = KeyboardShortcuts.entitlements; sourceTree = "<group>"; };
 		8FD588402620DA59006024B9 /* AlertBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertBuilder.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -62,6 +63,7 @@
 		8F039ED02620899E006C1CD4 /* KeyboardShortcuts */ = {
 			isa = PBXGroup;
 			children = (
+				8F4A2DEB262E50F300897945 /* KeyboardShortcuts.entitlements */,
 				8FD588432620DA5F006024B9 /* Support */,
 				8F039EE626208D39006C1CD4 /* View Controllers */,
 				8F039ED12620899E006C1CD4 /* AppDelegate.swift */,
@@ -314,7 +316,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = KeyboardShortcuts/KeyboardShortcuts.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = G8C3PMN49A;
 				INFOPLIST_FILE = KeyboardShortcuts/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -322,6 +326,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.ryangrier.KeyboardShortcuts;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -332,7 +337,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = KeyboardShortcuts/KeyboardShortcuts.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = G8C3PMN49A;
 				INFOPLIST_FILE = KeyboardShortcuts/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -340,6 +347,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.ryangrier.KeyboardShortcuts;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

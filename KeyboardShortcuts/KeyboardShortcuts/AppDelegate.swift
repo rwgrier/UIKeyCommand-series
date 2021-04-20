@@ -7,7 +7,33 @@
 
 import UIKit
 
-@main class AppDelegate: UIResponder { }
+extension UIMenu.Identifier {
+    static var show = UIMenu.Identifier("show")
+}
+
+@main class AppDelegate: UIResponder {
+
+    // Build the Catalyst (macOS) menu
+    override func buildMenu(with builder: UIMenuBuilder) {
+        super.buildMenu(with: builder)
+
+        // Ignore the contextual menu builder.
+        guard builder.system == .main else { return }
+
+        // Remove some extra menus we don't need for this example.
+        builder.remove(menu: .services)
+        builder.remove(menu: .format)
+
+        let menu = UIMenu(title: "Show",
+                          identifier: .show,
+                          options: .displayInline,
+                          children: [TableViewController.showTableAlert,
+                                     DetailViewController.showDetailAlert])
+
+
+        builder.insertChild(menu, atStartOfMenu: .file)
+    }
+}
 
 // MARK: - UIApplicationDelegate
 

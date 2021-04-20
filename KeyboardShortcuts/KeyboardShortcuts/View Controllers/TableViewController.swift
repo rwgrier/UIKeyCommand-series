@@ -8,6 +8,13 @@
 import UIKit
 
 class TableViewController: UITableViewController {
+    class var showTableAlert: UIKeyCommand {
+        return UIKeyCommand(title: "Show Table",
+                            action: #selector(tableViewAction),
+                            input: "t",
+                            modifierFlags: .command)
+    }
+
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
@@ -15,7 +22,7 @@ class TableViewController: UITableViewController {
         print("[TableViewController] Responder Chain: \(_fullResponderChain)")
     }
     
-    @objc private func tableViewAction() {
+    @objc internal func tableViewAction() {
         let title = NSLocalizedString("Table View Action", comment: "")
         let message = NSLocalizedString("This action was triggered from the table view controller.", comment: "")
         
@@ -73,12 +80,7 @@ extension TableViewController {
                                    action: #selector(showInfo),
                                    input: "i",
                                    modifierFlags: .command)
-        
-        let tableCommand = UIKeyCommand(title: "Show Table",
-                                   action: #selector(tableViewAction),
-                                   input: "t",
-                                   modifierFlags: .command)
-        
-        return [infoCommand, tableCommand]
+
+        return [infoCommand, TableViewController.showTableAlert]
     }
 }

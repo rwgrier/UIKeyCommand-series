@@ -8,6 +8,20 @@
 import UIKit
 
 class DetailViewController: UIViewController {
+    class var showDetailAlert: UIKeyCommand {
+        return UIKeyCommand(title: "Show Detail",
+                            action: #selector(detailViewAction),
+                            input: "d",
+                            modifierFlags: .command)
+    }
+
+    class var showInfoAlert: UIKeyCommand {
+        return UIKeyCommand(title: "Show Info",
+                            action: #selector(showInfo),
+                            input: "i",
+                            modifierFlags: .command)
+    }
+
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
 
@@ -48,17 +62,7 @@ class DetailViewController: UIViewController {
 // MARK: - Keyboard Shortcuts
 
 extension DetailViewController {
-    override var keyCommands: [UIKeyCommand]? {        
-        let infoCommand = UIKeyCommand(title: "Show Info",
-                                   action: #selector(showInfo),
-                                   input: "i",
-                                   modifierFlags: .command)
-        
-        let detailCommand = UIKeyCommand(title: "Show Detail",
-                                   action: #selector(detailViewAction),
-                                   input: "d",
-                                   modifierFlags: .command)
-        
-        return [infoCommand, detailCommand]
+    override var keyCommands: [UIKeyCommand]? {
+        return [DetailViewController.showInfoAlert, DetailViewController.showDetailAlert]
     }
 }
