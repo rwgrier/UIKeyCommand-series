@@ -4,14 +4,4 @@ This is the counterpart Git repo to my blog series on [UIKeyCommand](https://dev
 
 Part one
 
-[Blog post]() | [Code Branch](https://github.com/rwgrier/UIKeyCommand-series/tree/part-1-basics)
-
-Part two 
-
-[Blog post]() | [Code Branch](https://github.com/rwgrier/UIKeyCommand-series/tree/part-2-splitview)
-
-
-Part three
-
-[Blog post]() | [Code Branch](https://github.com/rwgrier/UIKeyCommand-series/tree/part-3-catalyst)
-
+[Blog post](https://ryan.grier.co/2021/04/21/uikeycommand-part-1/) | [Code Branch](https://github.com/rwgrier/UIKeyCommand-series/tree/part-1-basics)
